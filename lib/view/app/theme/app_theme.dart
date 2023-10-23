@@ -1,0 +1,67 @@
+import 'package:firebase_todo/view/app/theme/app_color.dart';
+import 'package:firebase_todo/view/app/theme/app_text_theme.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+abstract class AppTheme {
+  AppTheme._();
+
+  static ThemeData defaultTheme() => ThemeData(
+        primaryColor: AppColor.white,
+        scaffoldBackgroundColor: AppColor.white,
+        appBarTheme: AppBarTheme(
+          color: AppColor.white,
+          elevation: 2.0,
+          iconTheme: const IconThemeData(
+            color: AppColor.black,
+            size: 24.0,
+          ),
+          actionsIconTheme: const IconThemeData(
+            color: AppColor.black,
+          ),
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
+          titleTextStyle: AppTextTheme.titleMedium,
+        ),
+        bottomSheetTheme: const BottomSheetThemeData(
+          backgroundColor: AppColor.white,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            maximumSize: MaterialStatePropertyAll(Size(335.w, 48.h)),
+            minimumSize: MaterialStatePropertyAll(Size(335.w, 48.h)),
+            shape: const MaterialStatePropertyAll(
+              StadiumBorder(),
+            ),
+            backgroundColor: const MaterialStatePropertyAll(AppColor.red),
+            elevation: const MaterialStatePropertyAll(0.0),
+            textStyle: MaterialStatePropertyAll(
+              AppTextTheme.bodyLarge.copyWith(
+                color: AppColor.white,
+              ),
+            ),
+          ),
+        ),
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: ButtonStyle(
+            maximumSize: MaterialStatePropertyAll(Size(335.w, 48.h)),
+            minimumSize: MaterialStatePropertyAll(Size(335.w, 48.h)),
+            shape: const MaterialStatePropertyAll(
+              StadiumBorder(),
+            ),
+            textStyle: MaterialStatePropertyAll(
+              AppTextTheme.bodyLarge.copyWith(
+                color: AppColor.red,
+              ),
+            ),
+            backgroundColor: const MaterialStatePropertyAll(AppColor.white),
+            side: const MaterialStatePropertyAll(
+              BorderSide(
+                width: 1,
+                color: AppColor.red,
+              ),
+            ),
+          ),
+        ),
+      );
+}
