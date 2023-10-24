@@ -41,7 +41,7 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               const SizedBox(height: 10),
               inputTextField(
-                controller: _emailController,
+                controller: _passwordController,
                 icon: Icons.lock,
                 isPasswordType: true,
                 text: 'Password',
