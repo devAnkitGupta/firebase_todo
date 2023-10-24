@@ -1,3 +1,4 @@
+import 'package:firebase_todo/view/app/route/route_constants.dart';
 import 'package:firebase_todo/view/app/theme/app_color.dart';
 import 'package:firebase_todo/view/widgets/clickable_text.dart';
 import 'package:firebase_todo/view/widgets/text_field.dart';
@@ -42,11 +43,11 @@ class _SignInScreenState extends State<SignInScreen> {
               inputTextField(
                 controller: _emailController,
                 icon: Icons.lock,
-                isPasswordType: false,
+                isPasswordType: true,
                 text: 'Password',
               ),
               const SizedBox(height: 20),
-              OutlinedButton(
+              ElevatedButton(
                 onPressed: () {},
                 child: const Text('Sign In'),
               ),
@@ -58,11 +59,17 @@ class _SignInScreenState extends State<SignInScreen> {
                   children: [
                     ClickableText(
                       title: 'Sign Up',
-                      callback: () {},
+                      callback: () => Navigator.pushNamed(
+                        context,
+                        RouteConstants.signUp,
+                      ),
                     ),
                     ClickableText(
-                      title: 'Forget Password?',
-                      callback: () {},
+                      title: 'Forgot Password?',
+                      callback: () => Navigator.pushNamed(
+                        context,
+                        RouteConstants.forgetPassword,
+                      ),
                     ),
                   ],
                 ),

@@ -1,5 +1,5 @@
+import 'package:firebase_todo/view/app/route/route_constants.dart';
 import 'package:firebase_todo/view/app/theme/app_theme.dart';
-import 'package:firebase_todo/view/screens/auth_screens/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -50,7 +50,7 @@ class App extends StatelessWidget {
       theme: AppTheme.defaultTheme(),
       routes: Routes.getAll(),
       // onGenerateRoute: Routes.generateRoute,
-      home: const SignInScreen(),
+      initialRoute: RouteConstants.signIn,
     );
   }
 }
