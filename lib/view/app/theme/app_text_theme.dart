@@ -189,7 +189,7 @@ abstract class AppTextTheme {
 
   static final TextStyle chipLabel = TextStyle(
     fontSize: 12.sp,
-    color: AppColor.white,
+    color: AppColor.black,
     fontWeight: FontWeight.w500,
     fontStyle: FontStyle.normal,
     wordSpacing: 0,

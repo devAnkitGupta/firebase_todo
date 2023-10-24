@@ -65,6 +65,15 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ),
                     ClickableText(
+                      title: 'User Profile',
+                      callback: () {
+                        Navigator.pushNamed(
+                          context,
+                          RouteConstants.userProfile,
+                        );
+                      },
+                    ),
+                    ClickableText(
                       title: 'Forgot Password?',
                       callback: () => Navigator.pushNamed(
                         context,
